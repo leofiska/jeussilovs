@@ -18,7 +18,8 @@ class GenerateMenus
       \Menu::make('TheBestNavBar', function ($menu) {
         $menu->add('Home');
         $menu->add('Sobre', '#about');
-        $menu->add('Livros', 'books');
+        $menu->add('Buscar Livros', 'books');
+        $menu->add('Registrar Livro', 'register-book');
       });
 
     return $next($request);

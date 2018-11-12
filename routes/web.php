@@ -28,3 +28,7 @@ Route::get('/about', function () {
 Route::get('/books', function () {
     return view('books');
 });
+
+Route::get('/register-book', function () {
+    return view('register-book');
+});
