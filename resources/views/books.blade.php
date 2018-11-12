@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Biblioteca FisCar</title>
+        <title>Livros | Biblioteca FisCar</title>
 
         <!-- Favicon -->
         <link href="{{URL::asset('img/favicon.ico')}}" rel="shortcut icon">
@@ -22,7 +22,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="{{URL::asset('js/ajax.js')}}"></script>
         <style>
-          div.menu-div > div {
+          div.menu-div > div  {
             display: inline-block;
             padding: 2px 10px;
           }
@@ -30,7 +30,7 @@
     </head>
     <body>
       {!! $TheBestNavBar->asDiv(['class' => 'menu-div']) !!}
-        <div class="flex-center position-ref full-height" id="fundo">
+        <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
             <div class="top-right links">
                 @if (Auth::check())
@@ -42,23 +42,7 @@
             </div>
             @endif
             <div class="content">
-                <i class="fa fa-bank"></i>
-                <div class="title m-b-md">
-                    Biblioteca FisCar
-                </div>
-                <div class="links">
-                    <a href="/books">
-                        <i class="fa fa-info"> Livros</i>
-                    </a>
-                    <a href="#about">
-                        <i class="fa fa-info"> Sobre</i>
-                    </a>
-                </div>
             </div>
         </div>
-        <div class="flex-center position-ref full-height" id="about">
-        
-        </div>
-        
     </body>
 </html>

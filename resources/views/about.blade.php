@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Biblioteca FisCar</title>
+        <title>Sobre | Biblioteca FisCar</title>
 
         <!-- Favicon -->
         <link href="{{URL::asset('img/favicon.ico')}}" rel="shortcut icon">
@@ -21,15 +21,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="{{URL::asset('js/ajax.js')}}"></script>
-        <style>
-          div.menu-div > div {
-            display: inline-block;
-            padding: 2px 10px;
-          }
-        </style>
     </head>
     <body>
-      {!! $TheBestNavBar->asDiv(['class' => 'menu-div']) !!}
         <div class="flex-center position-ref full-height" id="fundo">
             @if (Route::has('login'))
             <div class="top-right links">
@@ -43,22 +36,18 @@
             @endif
             <div class="content">
                 <i class="fa fa-bank"></i>
-                <div class="title m-b-md">
+                <div class="title m-b-md" onClick="window.location.href='/'" style="cursor: pointer">
                     Biblioteca FisCar
                 </div>
                 <div class="links">
                     <a href="/books">
                         <i class="fa fa-info"> Livros</i>
                     </a>
-                    <a href="#about">
+                    <a href="/about">
                         <i class="fa fa-info"> Sobre</i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="flex-center position-ref full-height" id="about">
-        
-        </div>
-        
     </body>
 </html>
