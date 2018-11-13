@@ -29,6 +29,8 @@ Route::get('/books', function () {
     return view('books');
 });
 
-Route::get('/register-book', function () {
-    return view('register-book');
+Route::get('/create', function () {
+    return view('create');
 });
+
+Route::resource('livros', 'LivroController');

@@ -22,15 +22,25 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="{{URL::asset('js/ajax.js')}}"></script>
         <style>
-          div.menu-div > div {
+        div.menu-div {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            height: 2em;
+            top: 0px;
+            z-index: 10000;
+            background-color: #ffffff;
+            border-bottom: 1px solid #333333;
+        }
+        div.menu-div > div {
             display: inline-block;
             padding: 2px 10px;
-          }
+        }
         </style>
     </head>
     <body>
-      {!! $TheBestNavBar->asDiv(['class' => 'menu-div']) !!}
-        <div class="flex-center position-ref full-height" id="fundo">
+        {!! $TheBestNavBar->asDiv(['class' => 'menu-div']) !!}
+        <div class="flex-center position-ref full-height" style="z-index: 1000" id="fundo">
             @if (Route::has('login'))
             <div class="top-right links">
                 @if (Auth::check())
@@ -56,8 +66,14 @@
                 </div>
             </div>
         </div>
-        <div class="flex-center position-ref full-height" id="about">
-        
+        <div class="position-ref full-height" id="about">
+          <div style="margin-left: 1em;">
+            <h1>Sobre</h1>
+            <br />
+            <p>
+                Aqui contém informações sobre a biblioteca.
+            </p>
+          </div>
         </div>
         
     </body>
